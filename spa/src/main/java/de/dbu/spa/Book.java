@@ -6,39 +6,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
+import io.swagger.annotations.ApiModel;
 
+@ApiModel
 @Entity
+@Getter
+@Setter
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
-    @Getter @Setter private String title;
-    @Getter
-    @Setter
-    private String subtitle;
-    @Getter
-    @Setter
-    private String isbn;
-    @Getter
-    @Setter
-    private String bookAbstract;
-    @Getter
-    @Setter
-    private int numPages;
-    @Getter
-    @Setter
-    private String author;
-    @Getter
-    @Setter
-    private String publisher;
-    @Getter
-    @Setter
-    private String price;
-    @Getter
-    @Setter
-    private String cover;
+    public Long id;
+    public String title;
+    public String author;
+
 }
-    
-    
-
